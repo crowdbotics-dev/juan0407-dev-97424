@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import Chia,Hummus,Rojo
+from home.models import Chia
 from django.http import HttpRequest
 from django.utils.translation import ugettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -76,20 +76,8 @@ class PasswordSerializer(PasswordResetSerializer):
     """Custom serializer for rest_auth to solve reset password error"""
     password_reset_form_class = ResetPasswordForm
 
-class RojoSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Rojo
-        fields = "__all__"
-
 class ChiaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Chia
-        fields = "__all__"
-
-class HummusSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Hummus
         fields = "__all__"

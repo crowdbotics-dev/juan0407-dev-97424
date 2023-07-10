@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Chia,Hummus,Rojo
-from .serializers import ChiaSerializer,HummusSerializer,RojoSerializer
+from home.models import Chia
+from .serializers import ChiaSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -33,17 +33,7 @@ class LoginViewSet(ViewSet):
         user_serializer = UserSerializer(user)
         return Response({"token": token.key, "user": user_serializer.data})
 
-class RojoViewSet(viewsets.ModelViewSet):
-    serializer_class = RojoSerializer
-    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
-    queryset = Rojo.objects.all()
-
 class ChiaViewSet(viewsets.ModelViewSet):
     serializer_class = ChiaSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Chia.objects.all()
-
-class HummusViewSet(viewsets.ModelViewSet):
-    serializer_class = HummusSerializer
-    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
-    queryset = Hummus.objects.all()
