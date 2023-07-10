@@ -6,3 +6,6 @@ class Chia(models.Model):
 class Frodo(models.Model):
     'Generated Model'
     vamlu = models.BigIntegerField()
+class Sam(models.Model):
+    'Generated Model'
+    asca = models.BigIntegerField()

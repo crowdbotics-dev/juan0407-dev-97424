@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Chia,Frodo
-from .serializers import ChiaSerializer,FrodoSerializer
+from home.models import Chia,Frodo,Sam
+from .serializers import ChiaSerializer,FrodoSerializer,SamSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -42,3 +42,8 @@ class FrodoViewSet(viewsets.ModelViewSet):
     serializer_class = FrodoSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Frodo.objects.all()
+
+class SamViewSet(viewsets.ModelViewSet):
+    serializer_class = SamSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Sam.objects.all()
