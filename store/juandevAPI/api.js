@@ -24,6 +24,24 @@ function api_v1_chia_partial_update(payload) {
 function api_v1_chia_destroy(payload) {
   return juandevAPI.delete(`/api/v1/chia/${payload.id}/`)
 }
+function api_v1_frodo_list(payload) {
+  return juandevAPI.get(`/api/v1/frodo/`)
+}
+function api_v1_frodo_create(payload) {
+  return juandevAPI.post(`/api/v1/frodo/`, payload)
+}
+function api_v1_frodo_retrieve(payload) {
+  return juandevAPI.get(`/api/v1/frodo/${payload.id}/`)
+}
+function api_v1_frodo_update(payload) {
+  return juandevAPI.put(`/api/v1/frodo/${payload.id}/`, payload)
+}
+function api_v1_frodo_partial_update(payload) {
+  return juandevAPI.patch(`/api/v1/frodo/${payload.id}/`, payload)
+}
+function api_v1_frodo_destroy(payload) {
+  return juandevAPI.delete(`/api/v1/frodo/${payload.id}/`)
+}
 function api_v1_login_create(payload) {
   return juandevAPI.post(`/api/v1/login/`, payload)
 }
@@ -71,6 +89,12 @@ export const apiService = {
   api_v1_chia_update,
   api_v1_chia_partial_update,
   api_v1_chia_destroy,
+  api_v1_frodo_list,
+  api_v1_frodo_create,
+  api_v1_frodo_retrieve,
+  api_v1_frodo_update,
+  api_v1_frodo_partial_update,
+  api_v1_frodo_destroy,
   api_v1_login_create,
   api_v1_signup_create,
   rest_auth_login_create,
