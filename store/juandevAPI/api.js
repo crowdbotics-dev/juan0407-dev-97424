@@ -45,6 +45,24 @@ function api_v1_frodo_destroy(payload) {
 function api_v1_login_create(payload) {
   return juandevAPI.post(`/api/v1/login/`, payload)
 }
+function api_v1_sam_list(payload) {
+  return juandevAPI.get(`/api/v1/sam/`)
+}
+function api_v1_sam_create(payload) {
+  return juandevAPI.post(`/api/v1/sam/`, payload)
+}
+function api_v1_sam_retrieve(payload) {
+  return juandevAPI.get(`/api/v1/sam/${payload.id}/`)
+}
+function api_v1_sam_update(payload) {
+  return juandevAPI.put(`/api/v1/sam/${payload.id}/`, payload)
+}
+function api_v1_sam_partial_update(payload) {
+  return juandevAPI.patch(`/api/v1/sam/${payload.id}/`, payload)
+}
+function api_v1_sam_destroy(payload) {
+  return juandevAPI.delete(`/api/v1/sam/${payload.id}/`)
+}
 function api_v1_signup_create(payload) {
   return juandevAPI.post(`/api/v1/signup/`, payload)
 }
@@ -96,6 +114,12 @@ export const apiService = {
   api_v1_frodo_partial_update,
   api_v1_frodo_destroy,
   api_v1_login_create,
+  api_v1_sam_list,
+  api_v1_sam_create,
+  api_v1_sam_retrieve,
+  api_v1_sam_update,
+  api_v1_sam_partial_update,
+  api_v1_sam_destroy,
   api_v1_signup_create,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
