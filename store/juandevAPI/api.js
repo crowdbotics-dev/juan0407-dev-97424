@@ -63,6 +63,24 @@ function api_v1_sam_partial_update(payload) {
 function api_v1_sam_destroy(payload) {
   return juandevAPI.delete(`/api/v1/sam/${payload.id}/`)
 }
+function api_v1_sauron_list(payload) {
+  return juandevAPI.get(`/api/v1/sauron/`)
+}
+function api_v1_sauron_create(payload) {
+  return juandevAPI.post(`/api/v1/sauron/`, payload)
+}
+function api_v1_sauron_retrieve(payload) {
+  return juandevAPI.get(`/api/v1/sauron/${payload.id}/`)
+}
+function api_v1_sauron_update(payload) {
+  return juandevAPI.put(`/api/v1/sauron/${payload.id}/`, payload)
+}
+function api_v1_sauron_partial_update(payload) {
+  return juandevAPI.patch(`/api/v1/sauron/${payload.id}/`, payload)
+}
+function api_v1_sauron_destroy(payload) {
+  return juandevAPI.delete(`/api/v1/sauron/${payload.id}/`)
+}
 function api_v1_signup_create(payload) {
   return juandevAPI.post(`/api/v1/signup/`, payload)
 }
@@ -120,6 +138,12 @@ export const apiService = {
   api_v1_sam_update,
   api_v1_sam_partial_update,
   api_v1_sam_destroy,
+  api_v1_sauron_list,
+  api_v1_sauron_create,
+  api_v1_sauron_retrieve,
+  api_v1_sauron_update,
+  api_v1_sauron_partial_update,
+  api_v1_sauron_destroy,
   api_v1_signup_create,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
