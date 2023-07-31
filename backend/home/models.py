@@ -9,3 +9,6 @@ class Frodo(models.Model):
 class Sam(models.Model):
     'Generated Model'
     asca = models.BigIntegerField()
+class Sauron(models.Model):
+    'Generated Model'
+    armor = models.BigIntegerField()

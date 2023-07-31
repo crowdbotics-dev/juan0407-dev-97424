@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Chia,Frodo,Sam
-from .serializers import ChiaSerializer,FrodoSerializer,SamSerializer
+from home.models import Chia,Frodo,Sam,Sauron,Chia,Frodo,Sam,Sauron,Chia,Frodo,Sam,Sauron
+from .serializers import ChiaSerializer,FrodoSerializer,SamSerializer,SauronSerializer,ChiaSerializer,FrodoSerializer,SamSerializer,SauronSerializer,ChiaSerializer,FrodoSerializer,SamSerializer,SauronSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -47,3 +47,8 @@ class SamViewSet(viewsets.ModelViewSet):
     serializer_class = SamSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Sam.objects.all()
+
+class SauronViewSet(viewsets.ModelViewSet):
+    serializer_class = SauronSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Sauron.objects.all()
