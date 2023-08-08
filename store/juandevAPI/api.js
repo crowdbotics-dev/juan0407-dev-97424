@@ -1,122 +1,168 @@
-import axios from "axios"
+import axios from "axios";
 const juandevAPI = axios.create({
   baseURL: "https://juan0407-dev-97424.botics.co",
-  headers: { Accept: "application/json", "Content-Type": "application/json" }
-})
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json"
+  }
+});
+
 function api_docs_schema_retrieve(payload) {
-  return juandevAPI.get(`/api-docs/schema/`, { params: { lang: payload.lang } })
+  return juandevAPI.get(`/api-docs/schema/`, {
+    params: {
+      lang: payload.lang
+    }
+  });
 }
+
 function api_v1_chia_list(payload) {
-  return juandevAPI.get(`/api/v1/chia/`)
+  return juandevAPI.get(`/api/v1/chia/`);
 }
+
 function api_v1_chia_create(payload) {
-  return juandevAPI.post(`/api/v1/chia/`, payload)
+  return juandevAPI.post(`/api/v1/chia/`, payload);
 }
+
 function api_v1_chia_retrieve(payload) {
-  return juandevAPI.get(`/api/v1/chia/${payload.id}/`)
+  return juandevAPI.get(`/api/v1/chia/${payload.id}/`);
 }
+
 function api_v1_chia_update(payload) {
-  return juandevAPI.put(`/api/v1/chia/${payload.id}/`, payload)
+  return juandevAPI.put(`/api/v1/chia/${payload.id}/`, payload);
 }
+
 function api_v1_chia_partial_update(payload) {
-  return juandevAPI.patch(`/api/v1/chia/${payload.id}/`, payload)
+  return juandevAPI.patch(`/api/v1/chia/${payload.id}/`, payload);
 }
+
 function api_v1_chia_destroy(payload) {
-  return juandevAPI.delete(`/api/v1/chia/${payload.id}/`)
+  return juandevAPI.delete(`/api/v1/chia/${payload.id}/`);
 }
+
 function api_v1_frodo_list(payload) {
-  return juandevAPI.get(`/api/v1/frodo/`)
+  return juandevAPI.get(`/api/v1/frodo/`);
 }
+
 function api_v1_frodo_create(payload) {
-  return juandevAPI.post(`/api/v1/frodo/`, payload)
+  return juandevAPI.post(`/api/v1/frodo/`, payload);
 }
+
 function api_v1_frodo_retrieve(payload) {
-  return juandevAPI.get(`/api/v1/frodo/${payload.id}/`)
+  return juandevAPI.get(`/api/v1/frodo/${payload.id}/`);
 }
+
 function api_v1_frodo_update(payload) {
-  return juandevAPI.put(`/api/v1/frodo/${payload.id}/`, payload)
+  return juandevAPI.put(`/api/v1/frodo/${payload.id}/`, payload);
 }
+
 function api_v1_frodo_partial_update(payload) {
-  return juandevAPI.patch(`/api/v1/frodo/${payload.id}/`, payload)
+  return juandevAPI.patch(`/api/v1/frodo/${payload.id}/`, payload);
 }
+
 function api_v1_frodo_destroy(payload) {
-  return juandevAPI.delete(`/api/v1/frodo/${payload.id}/`)
+  return juandevAPI.delete(`/api/v1/frodo/${payload.id}/`);
 }
+
 function api_v1_login_create(payload) {
-  return juandevAPI.post(`/api/v1/login/`, payload)
+  return juandevAPI.post(`/api/v1/login/`, payload);
 }
+
 function api_v1_sam_list(payload) {
-  return juandevAPI.get(`/api/v1/sam/`)
+  return juandevAPI.get(`/api/v1/sam/`);
 }
+
 function api_v1_sam_create(payload) {
-  return juandevAPI.post(`/api/v1/sam/`, payload)
+  return juandevAPI.post(`/api/v1/sam/`, payload);
 }
+
 function api_v1_sam_retrieve(payload) {
-  return juandevAPI.get(`/api/v1/sam/${payload.id}/`)
+  return juandevAPI.get(`/api/v1/sam/${payload.id}/`);
 }
+
 function api_v1_sam_update(payload) {
-  return juandevAPI.put(`/api/v1/sam/${payload.id}/`, payload)
+  return juandevAPI.put(`/api/v1/sam/${payload.id}/`, payload);
 }
+
 function api_v1_sam_partial_update(payload) {
-  return juandevAPI.patch(`/api/v1/sam/${payload.id}/`, payload)
+  return juandevAPI.patch(`/api/v1/sam/${payload.id}/`, payload);
 }
+
 function api_v1_sam_destroy(payload) {
-  return juandevAPI.delete(`/api/v1/sam/${payload.id}/`)
+  return juandevAPI.delete(`/api/v1/sam/${payload.id}/`);
 }
+
 function api_v1_sauron_list(payload) {
-  return juandevAPI.get(`/api/v1/sauron/`)
+  return juandevAPI.get(`/api/v1/sauron/`);
 }
+
 function api_v1_sauron_create(payload) {
-  return juandevAPI.post(`/api/v1/sauron/`, payload)
+  return juandevAPI.post(`/api/v1/sauron/`, payload);
 }
+
 function api_v1_sauron_retrieve(payload) {
-  return juandevAPI.get(`/api/v1/sauron/${payload.id}/`)
+  return juandevAPI.get(`/api/v1/sauron/${payload.id}/`);
 }
+
 function api_v1_sauron_update(payload) {
-  return juandevAPI.put(`/api/v1/sauron/${payload.id}/`, payload)
+  return juandevAPI.put(`/api/v1/sauron/${payload.id}/`, payload);
 }
+
 function api_v1_sauron_partial_update(payload) {
-  return juandevAPI.patch(`/api/v1/sauron/${payload.id}/`, payload)
+  return juandevAPI.patch(`/api/v1/sauron/${payload.id}/`, payload);
 }
+
 function api_v1_sauron_destroy(payload) {
-  return juandevAPI.delete(`/api/v1/sauron/${payload.id}/`)
+  return juandevAPI.delete(`/api/v1/sauron/${payload.id}/`);
 }
+
 function api_v1_signup_create(payload) {
-  return juandevAPI.post(`/api/v1/signup/`, payload)
+  return juandevAPI.post(`/api/v1/signup/`, payload);
 }
+
 function rest_auth_login_create(payload) {
-  return juandevAPI.post(`/rest-auth/login/`, payload)
+  return juandevAPI.post(`/rest-auth/login/`, payload);
 }
+
 function rest_auth_logout_retrieve(payload) {
-  return juandevAPI.get(`/rest-auth/logout/`)
+  return juandevAPI.get(`/rest-auth/logout/`);
 }
+
 function rest_auth_logout_create(payload) {
-  return juandevAPI.post(`/rest-auth/logout/`)
+  return juandevAPI.post(`/rest-auth/logout/`);
 }
+
 function rest_auth_password_change_create(payload) {
-  return juandevAPI.post(`/rest-auth/password/change/`, payload)
+  return juandevAPI.post(`/rest-auth/password/change/`, payload);
 }
+
 function rest_auth_password_reset_create(payload) {
-  return juandevAPI.post(`/rest-auth/password/reset/`, payload)
+  return juandevAPI.post(`/rest-auth/password/reset/`, payload);
 }
+
 function rest_auth_password_reset_confirm_create(payload) {
-  return juandevAPI.post(`/rest-auth/password/reset/confirm/`, payload)
+  return juandevAPI.post(`/rest-auth/password/reset/confirm/`, payload);
 }
+
 function rest_auth_registration_create(payload) {
-  return juandevAPI.post(`/rest-auth/registration/`, payload)
+  return juandevAPI.post(`/rest-auth/registration/`, payload);
 }
+
 function rest_auth_registration_verify_email_create(payload) {
-  return juandevAPI.post(`/rest-auth/registration/verify-email/`, payload)
+  return juandevAPI.post(`/rest-auth/registration/verify-email/`, payload);
 }
+
 function rest_auth_user_retrieve(payload) {
-  return juandevAPI.get(`/rest-auth/user/`)
+  return juandevAPI.get(`/rest-auth/user/`);
 }
+
 function rest_auth_user_update(payload) {
-  return juandevAPI.put(`/rest-auth/user/`, payload)
+  return juandevAPI.put(`/rest-auth/user/`, payload);
 }
+
 function rest_auth_user_partial_update(payload) {
-  return juandevAPI.patch(`/rest-auth/user/`, payload)
+  return juandevAPI.patch(`/rest-auth/user/`, payload);
 }
+
 export const apiService = {
   api_docs_schema_retrieve,
   api_v1_chia_list,
@@ -156,4 +202,4 @@ export const apiService = {
   rest_auth_user_retrieve,
   rest_auth_user_update,
   rest_auth_user_partial_update
-}
+};
